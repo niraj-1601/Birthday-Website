@@ -133,27 +133,35 @@
             margin-bottom: 30px;
         }
 
-       /* Gallery */  
-    .gallery {  
-        display: grid;  
-        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));  
-        gap: 25px;  
-        max-width: 1150px;  
-        margin: auto;  
-    }  
+     /* Gallery */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    max-width: 1150px;
+    margin: auto;
+}
 
-    .gallery img {  
-        width: 100%;  
-        height: 340px;  
-        object-fit: contain;  
-        border-radius: 24px;  
-        transition: .4s;  
-        box-shadow: 0 12px 30px rgba(0, 0, 0, .25);  
-    }  
+.gallery img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 24px;
+    transition: .4s;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, .25);
+    position: relative;
+    z-index: 2;
+}
 
-    .gallery img:hover {  
-        transform: translateY(-10px) scale(1.03);  
-    }
+.gallery img:hover {
+    transform: translateY(-10px) scale(1.03);
+}
+
+/* Keep floating effects behind photos */
+.heart,
+.sparkle {
+    z-index: 1;
+}
         /* Cards */
         .card {
             max-width: 850px;
@@ -256,9 +264,7 @@
                 font-size: 1.8rem;
             }
 
-            .gallery img {
-                height: 280px;
-            }
+           
 
             .card {
                 padding: 28px;
